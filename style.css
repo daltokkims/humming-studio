@@ -493,6 +493,90 @@ a {
   transform: translateY(-50%);
 }
 
+.lesson-more {
+  margin-top: 20px;
+  text-align: left;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+
+.lesson-more summary {
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary-light);
+  list-style: none;
+  padding: 8px 0;
+  text-align: center;
+  transition: color var(--transition);
+}
+
+.lesson-more summary::-webkit-details-marker {
+  display: none;
+}
+
+.lesson-more summary::after {
+  content: ' ▾';
+  display: inline-block;
+  transition: transform var(--transition);
+}
+
+.lesson-more[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.lesson-more summary:hover {
+  color: var(--primary);
+}
+
+.lesson-intro,
+.lesson-reviews {
+  margin-top: 16px;
+}
+
+.lesson-intro h4,
+.lesson-reviews h4 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--primary-light);
+  margin-bottom: 8px;
+}
+
+.lesson-intro p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 0;
+}
+
+.lesson-review {
+  background: rgba(99, 102, 241, 0.05);
+  border-left: 3px solid var(--primary-light);
+  padding: 12px 14px;
+  margin: 0 0 10px;
+  border-radius: 6px;
+}
+
+.lesson-review:last-child {
+  margin-bottom: 0;
+}
+
+.lesson-review p {
+  font-size: 0.85rem;
+  color: var(--text);
+  line-height: 1.6;
+  margin-bottom: 6px;
+  font-style: italic;
+}
+
+.lesson-review cite {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-style: normal;
+}
+
 /* ===== Partner ===== */
 .partner {
   background: var(--bg-card);
